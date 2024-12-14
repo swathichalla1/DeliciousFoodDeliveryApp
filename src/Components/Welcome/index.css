@@ -1,0 +1,139 @@
+.HomeContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color:bisque;
+    background-image:linear-gradient(rgb(248, 174, 174),bisque,rgb(247, 187, 187));
+    background-size:cover;
+    padding:10px;
+    min-height:100vh;
+  }
+  .LogoAndPicture{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    min-width:50vw;
+    align-items:center;
+    
+  }
+  .WebliteLogo{
+    height:200px;
+    width:300px;
+    align-self:center;
+    border-radius:10px;
+    border:solid white 2px;
+  }
+  
+  .SignForm{
+    min-width:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    
+  }
+  
+  
+  .foodLogo{
+    display:flex;
+    margin:auto;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+  }
+  
+  .Signupbutton{
+    background-color:purple;
+    color:white;
+    height:50px;
+    width:100px;
+    border-radius:10px;
+    border:2px solid white;
+  }
+
+  .Signupbutton:hover{
+    background-color:crimson;
+  }
+  
+  .FoodImage {
+    width: 200px; 
+    height: auto;
+    animation: scaleImage 6s infinite ease-in-out ; 
+    transform-origin: center;
+    border:dashed 2px brown;
+  }
+
+  @keyframes scaleImage{
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(2); 
+    }
+    75% {
+      transform: scale(2); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+
+  }
+  
+  
+  
+
+
+
+  .foodLogoInSmallDevices{
+    display:flex;
+    margin:auto;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+
+  }
+  @media screen and (max-width:720px){
+    .foodLogo{
+      display:none;
+    }
+    .HomeContainer{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-around;
+      align-items:center;
+      padding:5px;
+    }
+    .FoodImage {
+      width: 100px; 
+      height: auto;
+      animation: scaleImage 6s infinite ease-in-out ; 
+      margin:40px;
+    }
+    .WebliteLogo{
+       height:100px;
+       width:180px;
+       margin-bottom:50px;
+    }
+    .SignForm{
+      margin-top:30px;
+    }
+  }
+  @media screen and (min-width:720px){
+    .foodLogoInSmallDevices{
+      display:none;
+    }
+
+  }
+
+  @media screen and (min-width:720px) and (max-width:1000px){
+    .FoodImage {
+      width: 150px; 
+      height: auto;
+      animation: scaleImage 6s infinite ease-in-out ; 
+      margin-left:10px;
+      margin-right:40px;
+      margin-top:30px;
+    }
+
+  } 

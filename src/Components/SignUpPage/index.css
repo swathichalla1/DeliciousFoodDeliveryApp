@@ -1,0 +1,68 @@
+.SignUpContainer{
+    background-image:url("https://res.cloudinary.com/dewfecih3/image/upload/v1731913823/Screenshot_2024-11-18_121938_mk24km.png");
+    background-size:cover;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    
+    
+}
+.SignUpForm{
+    border:2px solid white;
+    margin-left:120px;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:300px;
+    width:300px;
+    color:white;
+    border-radius:10px;
+    background-color:rgba(0, 0, 0, 0.155);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-right:20px;
+}
+.Signupheading{
+    color:white;
+    margin-left:120px;
+}
+.errmsg{
+    color:white;
+    margin-left:120px;
+}
+.SignUpbutton{
+    width:100px;
+}
+.eachfield{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+   margin:15px;
+}
+.SignUpbutton{
+    color:white;
+    background-color:rgb(37, 37, 37);
+    border-radius:5px;
+    border:2px solid white;
+    margin:10px;
+    padding:6px
+}
+
+@media screen and (max-width:700px){
+    .SignUpContainer{
+        align-items:center;
+    }
+    .Signupheading{
+           font-size:20px;
+           margin-left:10px;
+           align-self:center;
+           margin-right:20px;
+    }
+    .SignUpForm{
+        width:200px;
+        margin-left:10px;
+        margin-right:20px;
+    }
+}

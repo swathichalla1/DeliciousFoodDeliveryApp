@@ -1,0 +1,75 @@
+.profilepage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    background-color:darkgray;
+    min-height:100vh;
+    padding-top:90px;
+}
+.nameEmail{
+    border:2px solid black;
+    /*width:40%;*/
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    font-size:20px;
+    border-radius:10px;
+    padding:15px;
+}
+.profileSpan{
+    color:brown;
+    font-size:20px;
+}
+.phoneAddress{
+    border:2px solid black;
+    width:70%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    font-size:15px;
+    border-radius:10px;
+}
+.adddetails{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.addbutton{
+    background-color:crimson;
+    color:white;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+    width:50%;
+    padding:5px;
+    min-height:40px;
+    font-size:15px;
+}
+.addinput{
+    height:40px;
+    margin:20px;
+    width:70%;
+}
+.contact{
+    font-size:15px;
+}
+.number{
+    font-size:20px;
+}
+.editspan{
+    color:brown;
+    font-size:20px;
+}
+
+@media screen and (max-width:768px){
+ .phoneAddress{
+    padding:10px;
+ }
+ .nameEmail{
+    padding:10px;
+ }
+}

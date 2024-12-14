@@ -1,0 +1,69 @@
+.SignInContainer{
+    background-image:url("https://res.cloudinary.com/dewfecih3/image/upload/v1731925980/background_f5yqno.png");
+    background-size: cover; 
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.errmsg{
+    color:white;
+    margin-left:120px;
+}
+.SignInForm{
+    border:2px solid white;
+    margin-left:120px;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:200px;
+    width:300px;
+    color:white;
+    border-radius:10px;
+    background-color:rgba(0, 0, 0, 0.155);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-right:20px;
+}
+.SignInheading{
+    color:white;
+    margin-left:120px;
+    
+    
+}
+.SignInbutton{
+    width:100px;
+}
+.eachfield{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+   margin:5px;
+}
+.SignInbutton{
+    color:white;
+    background-color:rgb(37, 37, 37);
+    border-radius:5px;
+    border:2px solid white;
+    margin:10px;
+    padding:5px;
+    height:20px;
+    padding-bottom: 30px;
+}
+
+
+@media screen and (max-width:720px){
+    .SignInheading{
+        font-size:20px;
+        margin-left:0px;
+        margin-right:15px;
+    }
+    .SignInContainer{
+        align-items:center
+    }
+    .SignInForm{
+        width:200px;
+        margin-left:0px;
+    }
+}

@@ -1,0 +1,62 @@
+.showview{
+    display:flex;
+    flex-direction:column;
+    height:300px;
+    
+}
+.detailedView{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-color:beige;
+    padding:20px;
+}
+.detailimg{
+    height:200px;
+    width:300px;
+    align-self:center;
+}
+.detailtitle{
+    align-self:center;
+    font-style:italic;
+    color:crimson;
+    font-size:30px;
+    margin:5px;
+}
+.span{
+    color:red;
+    font-size:20px;
+}
+.detailDescription{
+    max-width:500px;
+    text-align:center;
+}
+
+  
+  .span {
+    font-weight: bold;
+    margin-right: 5px;   /* Adds space between label and colon */
+  }
+  
+  .span::after {
+    content: " :";        /* Adds the colon after the span */
+    margin-right: 5px;   /* Adds space between colon and value */
+  }
+  .originalprice{
+    color:brown;
+    text-decoration:line-through;
+    margin-left:20px
+  }
+  .detailAddToCart{
+    background-color:crimson;
+    color:white;
+    border:white;
+    margin:10px;
+    width:250px;
+    border-radius:10px;
+    font-size:15px;
+    padding:5px;
+    align-self:center;
+  }
