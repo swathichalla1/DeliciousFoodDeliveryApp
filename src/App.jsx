@@ -9,6 +9,7 @@ import Menu from './Components/Menu'
 import Profile from './Components/Profile'
 import DetailedView from './Components/DetailedView'
 import Cart from './Components/Cart'
+import NotFound from './Components/NotFound'
 
 export const context = createContext();
 
@@ -20,7 +21,8 @@ const App = ()=>{
   const [id,setid] = useState(localStorage.getItem('id') || null)
 
   const getCartlist = async()=>{
-         const response = await fetch(`http://localhost:4005/user/getCartList/${id}`);
+        //  const response = await fetch(`http://localhost:4005/user/getCartList/${id}`);
+        const response = await fetch(`https://deliciousfooddeliverappbackend.onrender.com/user/getCartList/${id}`);
          const data = await response.json();
          setcartlist(data);
   }
@@ -55,7 +57,8 @@ const App = ()=>{
       },
       body:JSON.stringify({updatedCartList,id})
     }
-           const response = await fetch("http://localhost:4005/user/updateCartList",options);
+          //  const response = await fetch("http://localhost:4005/user/updateCartList",options);
+           const response = await fetch("https://deliciousfooddeliverappbackend.onrender.com/user/updateCartList",options);
            const data = await response.json();
   }
 
@@ -90,6 +93,7 @@ const App = ()=>{
     <Route path="/profile" element={<Profile/>}/>
     <Route path="/DetailedView/:id" element={<DetailedView/>}/>
     <Route path="/Cart" element={<Cart/>}/>
+    <Route path="*" element={<NotFound/>}/>
     </Routes>
     </context.Provider>
     </BrowserRouter>

@@ -16,7 +16,8 @@ const Profile = () => {
   const [addressEdit, setAddressEdit] = useState(false);
 
   const getProfileDetails = async () => {
-    const response = await fetch(`http://localhost:4005/user/getUserdetails/${id}`);
+    // const response = await fetch(`http://localhost:4005/user/getUserdetails/${id}`);
+    const response = await fetch(`https://deliciousfooddeliverappbackend.onrender.com/user/getUserdetails/${id}`);
     const data = await response.json();
     setProfileData(data);
     setNewNumber(data.number || ''); 
@@ -36,7 +37,8 @@ const Profile = () => {
         body: JSON.stringify({ presentAddress, id })
       };
   
-      const response = await fetch("http://localhost:4005/user/updateAddress", options);
+      // const response = await fetch("http://localhost:4005/user/updateAddress", options);
+      const response = await fetch("https://deliciousfooddeliverappbackend.onrender.com/user/updateAddress", options);
       const data = await response.json();
   
       getProfileDetails(); 
@@ -59,7 +61,8 @@ const Profile = () => {
         body: JSON.stringify({ newNumber, id })
       };
   
-      const response = await fetch("http://localhost:4005/user/updateNumber", options);
+      // const response = await fetch("http://localhost:4005/user/updateNumber", options);
+      const response = await fetch("https://deliciousfooddeliverappbackend.onrender.com/user/updateNumber", options);
       const data = await response.json();
       getProfileDetails(); 
     }

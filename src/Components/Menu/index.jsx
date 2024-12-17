@@ -14,13 +14,15 @@ const Menu = () => {
   const [price, setPrice] = useState(50);
   const [initialFoodList, setInitialFoodList] = useState([]);
   const [filteredFoodList, setFilteredFoodList] = useState([]);
+  const [loading,setLoading] = useState(true);
   
   // Fetch the item details from the server
   const getItemDetails = async () => {
-    const response = await fetch("http://localhost:4005/item/getItems");
+    //const response = await fetch("http://localhost:4005/item/getItems");
+    const response = await fetch("https://deliciousfooddeliverappbackend.onrender.com/item/getItems");
     const data = await response.json();
-    // console.log(data);
-    setInitialFoodList(data); // Set the initial food list
+    setLoading(false)
+    setInitialFoodList(data); 
   };
 
   // Fetch items on component mount
@@ -92,9 +94,9 @@ const Menu = () => {
             <p>{`Searching items starting from ${price} Rs`}</p>
           </div>
         </div>
-
+        {loading && <p className="loading">Loading...</p>}
         <div >
-          {filteredFoodList.length === 0 ? (
+          {(filteredFoodList.length === 0 && !loading) ? (
             <div className="itemUnavailable">
             <h1>Sorry, currently we are not serving orders <br/>with your requirements!</h1>
             </div>

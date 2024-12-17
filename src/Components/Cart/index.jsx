@@ -10,7 +10,6 @@ import CheckUserAuthentication from '../CheckUserAuthentication'
 const Cart = () => {
     const token = localStorage.getItem("jwttoken");
     const {cartlist,ResetCart} = useContext(context);
-    console.log("cartlist from cart : ",cartlist);
     const [total,setTotal] = useState(0);
 
     useEffect(()=>{

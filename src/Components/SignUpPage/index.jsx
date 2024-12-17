@@ -48,9 +48,9 @@ const SignUpPage = ()=>{
               
               body:JSON.stringify({details})
            }
-             let response = await fetch("http://localhost:4005/user/register",options)
+            //let response = await fetch("http://localhost:4005/user/register",options)
+            let response = await fetch("https://deliciousfooddeliverappbackend.onrender.com/user/register",options)
              let data = await response.json()
-  
              if(response.ok===true){
               onSubmitSuccess(data.message)
   

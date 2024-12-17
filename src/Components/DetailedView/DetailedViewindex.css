@@ -60,3 +60,9 @@
     padding:5px;
     align-self:center;
   }
+  .Loading{
+    text-align:center;
+    font-size:25px;
+    margin:auto;
+    align-self:center;
+}

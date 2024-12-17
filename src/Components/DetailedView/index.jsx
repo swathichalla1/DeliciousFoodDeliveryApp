@@ -10,7 +10,7 @@ const DetailedView = ()=>{
     const {updateCartList,cartlist,increaseQuantity} = useContext(context)
     const id = useParams().id
     const [detaileddata,setdetaileddata] = useState({})
-    const [view,setview] = useState("Loading")
+    const [view,setview] = useState("loading")
 
     const addToCart = (detaileddata)=>{
         
@@ -32,7 +32,9 @@ const DetailedView = ()=>{
    }
 
     const getDetailedData = async()=>{
-           const response = await fetch(`http://localhost:4005/item/getDetailedView/${id}`);
+        
+        //    const response = await fetch(`http://localhost:4005/item/getDetailedView/${id}`);
+        const response = await fetch(`https://deliciousfooddeliverappbackend.onrender.com/item/getDetailedView/${id}`);
            const data = await response.json();
         
            setdetaileddata(data)
@@ -40,7 +42,7 @@ const DetailedView = ()=>{
             setview("success")
            }
            else{
-            setview("Failed")
+            setview("failed")
            }
     }
 
@@ -53,8 +55,10 @@ const DetailedView = ()=>{
     return(
         <div>
         <Navbar/>
+        
         <div className="detailedView">
-        {view==="success" ? (
+        {view==="loading" ? (<p className="Loading">Loading...</p>) :
+        view==="success" ? (
             <div className="showview">
                     <img src={detaileddata.img} alt="detailedImage" className="detailimg"/>
                     <h1 className="detailtitle">{detaileddata.title}</h1>
@@ -63,7 +67,7 @@ const DetailedView = ()=>{
                     <p><span className="span">Category</span>{detaileddata.category}</p>
                     <button type="button" className="detailAddToCart" onClick={() => addToCart(detaileddata)}>Add To Cart</button>
             </div>
-        ) : (<div>
+        ) : view === "failed" && (<div>
             <h1>There is some error</h1>
             </div>)}
         </div>
